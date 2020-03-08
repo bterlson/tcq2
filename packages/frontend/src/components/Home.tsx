@@ -1,19 +1,18 @@
 import React from "react";
-import "./App.css";
-
-function App() {
+import { Link } from "react-router-dom";
+function Home() {
   return (
     <div className="">
       <header className="flex justify-between px-4 py-2 bg-orange-200 h-16 items-center border-b border-orange-400">
         <a href="/" className="text-4xl">
           TCQ
         </a>
-        <a
-          href="/"
+        <Link
+          to="/dashboard"
           className="text-xl bg-transparent hover:bg-orange-600 font-semibold py-2 px-4 border border-orange-500 rounded hover:text-white"
         >
           Sign in
-        </a>
+        </Link>
       </header>
       <section className="bg-gray-300 mb-4">
         <div className="container flex flex-wrap flex-col md:flex-row items-center mx-auto pb-4">
@@ -51,7 +50,7 @@ function App() {
       <section className="container flex flex-wrap flex-col md:flex-row items-center mx-auto mt-4">
         <div className="w-full md:w-1/2 md:pr-4 pb-4 md:pb-0">
           <h2 className="text-2xl font-bold">Agenda management</h2>
-          <p className="text-xl">Add agenda items before the meeting, or set up automation to create agenda items with our API. Want to drive triage or standup agendas from GitHub issues labeled a certain way? No problemo!</p>
+          <p className="text-xl">Add agenda items before the meeting, or set up automation to create agenda items with our API. Want to drive triage or standup agendas from GitHub issues labeled a certain way? And then cancel the meeting if there is no agenda? No problemo!</p>
         </div>
 
         <div className="w-full md:w-1/2 md:pl-4">
@@ -96,4 +95,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
