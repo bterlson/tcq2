@@ -4,9 +4,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="grid grid-cols-2 overflow-hidden h-screen">
+      <header className="col-span-2 flex justify-center">
+        <img src={logo} className="w-auto inline-block" />
+      </header>
+      <main className="col-span-2">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -18,7 +20,7 @@ function App() {
         >
           NEVER LEARN REACT
         </a>
-      </header>
+      </main>
     </div>
   );
 }
