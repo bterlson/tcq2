@@ -5,7 +5,7 @@ module.exports = {
     plugins: [
         tailwindcss('./tailwind.js'),
         require('autoprefixer'),
-        purgecss({
+        ...(process.env.NODE_ENV === 'production' ? purgecss({
             content: [
                 './src/**/*.tsx',
                 './src/**/*.ts',
@@ -14,6 +14,6 @@ module.exports = {
             css: ['./src/assets/tailwind.css'],
             // Include any special characters you're using in this regular expression
             defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-        }),
+        }) : [])
     ],
 };
